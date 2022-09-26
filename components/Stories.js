@@ -16,7 +16,8 @@ function Stories(){
     // }, []);
 
     return(
-        <div className="flex space-x-2  p-6 bg-white rounded-sm overflow-x-scroll mt-3 border-gray-200">
+        <div className="flex space-x-2  p-6 bg-white rounded-sm overflow-x-scroll mt-8 border-gray-200 
+        scrollbar-thin scrollbar-thumb-black">
             {/* {suggestions.map((profile)=>( */}
                 <Story
                     img="https://avatars.githubusercontent.com/u/82611545?v=4"

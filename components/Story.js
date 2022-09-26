@@ -7,5 +7,4 @@ function Story({img,username1}){
             <p className="text-xs w-14 text-center truncate">{username1}</p>
         </div>
     )
-}
-export default Story
+}export default Story
