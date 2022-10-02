@@ -27,7 +27,6 @@ function Posts(){
             cap={post.cap}
             />
             ))}
-            <Post/>
         </div>
     )
 }
