@@ -1,5 +1,4 @@
 import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google"
 export const authOptions = {  
     // Configure one or more authentication providers  
@@ -12,6 +11,17 @@ export const authOptions = {
     ],
     pages: {
         signIn: "/auth/signin",
-    }
+    },
+    callback : {
+        async session({session,token,user}){
+          session.user.username = session.user.name
+          .split(" ")
+          .join("")
+          .toLocaleLowerCase();  
 
-}
+          session.user.uid= token.sub;
+          return session;
+        }
+    }
+} 
+export default NextAuth(authOptions);
