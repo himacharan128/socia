@@ -4,16 +4,21 @@ import {
 } from "@heroicons/react/outline";
 import {HomeIcon}from "@heroicons/react/solid";
 import { signOut,signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useRecoilState } from "recoil";
+import { modalState } from "../atoms/modalatom";
 function Header(){
     const { data:session,status}=useSession(); 
+    const router=useRouter();
+    const [open,setOpen]= useRecoilState(modalState);
     return(
         <div className="shadow-sm border-b bg-white sticky top-0 z-50">
             <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
                 {/* left */}
-                <div className="relative hidden sm:inline-grid w-24 cursor-pointer">
+                <div onClick={()=>router.push('/')} className="relative hidden sm:inline-grid w-24 cursor-pointer">
                     <Image src="https://links.papareact.com/ocw" layout="fill" objectFit="contain"/>
                 </div>
-                <div className="relative w-10 sm:hidden flex-shrink-0 cursor-pointer">
+                <div onClick={()=>router.push('/')} className="relative w-10 sm:hidden flex-shrink-0 cursor-pointer">
                 <Image src="https://links.papareact.com/jjm" layout="fill" objectFit="contain"/>
                 </div>
                 {/* middle */}
@@ -29,7 +34,7 @@ function Header(){
                 </div>
                 {/* right */}
                 <div className="flex items-center justify-end space-x-4">
-                    <HomeIcon className="navbtn"/>
+                    <HomeIcon onClick={()=>router.push('/')} className="navbtn"/>
                     <MenuIcon className="h-6 w-6 md:hidden  cursor-pointer"/>
                     {session ? (
                         <>
@@ -40,7 +45,7 @@ function Header(){
                                 9+
                             </div>
                         </div>
-                        <PlusCircleIcon className="navbtn"/>
+                        <PlusCircleIcon onClick={()=> setOpen(true)} className="navbtn"/>
                         <UserGroupIcon className="navbtn"/>
                         <HeartIcon className="navbtn"/>
                         <img onClick={signOut} src={session.user.image} alt="display picture" 
