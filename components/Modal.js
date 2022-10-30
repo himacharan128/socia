@@ -6,7 +6,7 @@ import {CameraIcon} from "@heroicons/react/outline";
 import {db,storage } from "../firebase"; 
 import { useSession } from "next-auth/react"
 import {addDoc,collection,serverTimestamp,updateDoc,doc} from  "@firebase/firestore"
-import { getDownloadURL, uploadString } from "firebase/storage";
+import { getDownloadURL, uploadString , ref} from "firebase/storage";
 function Modal(){
     const { data: session } = useSession(); 
     const [open,setOpen]=useRecoilState(modalState);
@@ -14,12 +14,13 @@ function Modal(){
     const captionRef=useRef(null);
     const [selectedFile,setSelectedFile]=useState(null);
     const [loading,setLoading]=useState(false);
+
     const uploadPost= async ()=>{
         if(loading) return;
         setLoading(true);
 
         const docRef = await addDoc(collection(db,'posts'),{
-            username : session.user.name,
+            username : session.user.username,
             caption : captionRef.current.value,
             profileImg : session.user.image,
             timeStamp : serverTimestamp()
@@ -94,10 +95,12 @@ function Modal(){
                                 </div>
                                 <div className="mt-5 sm:mt-6">
                                     <button type="button"
+                                    onClick={uploadPost}
+                                    disabled={!selectedFile}
                                         className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                         py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2
                                          focus:ring-red-500 sm:text-sm disabled:bg-gray-300">
-                                        Upload Post
+                                        {loading? "uploading....!" : "Upload Post"}
                                     </button>
                                 </div>
                             </div>
