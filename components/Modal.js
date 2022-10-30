@@ -3,15 +3,41 @@ import { useRecoilState } from "recoil"
 import { modalState } from "../atoms/modalatom";
 import {Dialog,Transition} from "@headlessui/react";
 import {CameraIcon} from "@heroicons/react/outline";
+import {db,storage } from "../firebase"; 
+import { useSession } from "next-auth/react"
+import {addDoc,collection,serverTimestamp,updateDoc,doc} from  "@firebase/firestore"
+import { getDownloadURL, uploadString } from "firebase/storage";
 function Modal(){
+    const { data: session } = useSession(); 
     const [open,setOpen]=useRecoilState(modalState);
     const filePickerRef=useRef(null);
     const captionRef=useRef(null);
     const [selectedFile,setSelectedFile]=useState(null);
-    //const uploadPost= asyn()=>{
-    //    if(loading) return;
-    //    setLoading(true);
-   // }
+    const [loading,setLoading]=useState(false);
+    const uploadPost= async ()=>{
+        if(loading) return;
+        setLoading(true);
+
+        const docRef = await addDoc(collection(db,'posts'),{
+            username : session.user.name,
+            caption : captionRef.current.value,
+            profileImg : session.user.image,
+            timeStamp : serverTimestamp()
+        })
+        console.log("new  do added with Id ",docRef.id);
+        const imageRef = ref(storage , `posts/${docRef.id}/image`);
+
+        await uploadString(imageRef,selectedFile, "data_url").then(async snapshot=>{
+            const downloadURL = await getDownloadURL(imageRef);
+            await updateDoc(doc(db,'posts',docRef.id),{
+                image: downloadURL
+            })
+            setOpen(false);
+            setLoading(false);
+            setSelectedFile(null);
+
+        })
+  }
     const addImageToPost=(e)=>{
         const reader =new FileReader();
         if (e.target.files[0]) {
@@ -42,9 +68,6 @@ function Modal(){
                     leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden 
                         shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
-                            
-                            
-                            
                             <div>
                                 {selectedFile ? (
                                     <img src={selectedFile} onClick={()=>setSelectedFile(null)} alt=""
