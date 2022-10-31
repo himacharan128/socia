@@ -6,7 +6,7 @@ import {CameraIcon} from "@heroicons/react/outline";
 import {db,storage } from "../firebase"; 
 import { useSession } from "next-auth/react"
 import {addDoc,collection,serverTimestamp,updateDoc,doc} from  "@firebase/firestore"
-import { getDownloadURL, uploadString , ref} from "firebase/storage";
+import { getDownloadURL, ref, uploadString} from "firebase/storage";
 function Modal(){
     const { data: session } = useSession(); 
     const [open,setOpen]=useRecoilState(modalState);
@@ -14,11 +14,9 @@ function Modal(){
     const captionRef=useRef(null);
     const [selectedFile,setSelectedFile]=useState(null);
     const [loading,setLoading]=useState(false);
-
     const uploadPost= async ()=>{
         if(loading) return;
         setLoading(true);
-
         const docRef = await addDoc(collection(db,'posts'),{
             username : session.user.username,
             caption : captionRef.current.value,
