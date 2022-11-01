@@ -17,6 +17,7 @@ function Header(){
                 {/* left */}
                 <div onClick={()=>router.push('/')} className="relative hidden sm:inline-grid w-24 cursor-pointer">
                     <Image src="https://links.papareact.com/ocw" layout="fill" objectFit="contain"/>
+                    {/* https://i.ibb.co/xz0v0tH/Screenshot-2022-11-01-at-8-29-02-PM.png */}
                 </div>
                 <div onClick={()=>router.push('/')} className="relative w-10 sm:hidden flex-shrink-0 cursor-pointer">
                 <Image src="https://links.papareact.com/jjm" layout="fill" objectFit="contain"/>

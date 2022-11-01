@@ -23,7 +23,7 @@ function Modal(){
             profileImg : session.user.image,
             timeStamp : serverTimestamp()
         })
-        console.log("new  do added with Id ",docRef.id);
+        //console.log("new  do added with Id ",docRef.id);
         const imageRef = ref(storage , `posts/${docRef.id}/image`);
 
         await uploadString(imageRef,selectedFile, "data_url").then(async snapshot=>{

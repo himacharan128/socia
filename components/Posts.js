@@ -7,25 +7,27 @@ function Posts(){
     useEffect(
         ()=> 
         onSnapshot(
-            query(collection(db, "posts"),orderBy("timestamp","desc")),
+            query(collection(db, "posts")/*, orderBy("timestamp","desc")*/),
             (snapshot) =>{
              setPosts(snapshot.docs);
+             // console.log(snapshot.docs);
             }
         ),
         [db]
     );
+   // console.log(Posts);
     return(
         <div>
-            {Posts.map((post) =>(
+         {Posts.map((post) =>(
             <Post
             key={post.id}
             id={post.id}
             username={post.data().username}
             userImage={post.data().profileImg}
-            img={post.data().img}
+            img={post.data().image}
             cap={post.data().caption}
             />
-            ))}
+            ))} 
         </div>
     );
 }
