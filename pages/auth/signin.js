@@ -1,5 +1,6 @@
 import { getProviders, signIn as SignIntoProvider} from "next-auth/react";
 import Header from "../../components/Header";
+import Image from 'next/image'
 function SignIn({providers}){
     console.log(providers)
     return (
@@ -9,7 +10,7 @@ function SignIn({providers}){
         py-2 -mt-56 px-14 text-center">
 
         <div className="mt-40">
-        <img className="w-80 rounded " src="https://i.ibb.co/n359qnG/Screenshot-2022-11-04-at-11-17-10-PM.png"/>
+        <Image className="w-80 rounded " src="https://i.ibb.co/n359qnG/Screenshot-2022-11-04-at-11-17-10-PM.png"/>
         {Object.values(providers).map((provider) => (
             <div key={provider.name}>
                 <button className="mt-10 p-4 bg-blue-500 rounded-lg text-white" 
