@@ -1,23 +1,27 @@
 const profile=[
     {
+        key:"4",
         id:'user_id',
         avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
         username:'remus',
         caption:'caption....................................................!',
     },
     {
+        key:"3",
         id:'user_id',
         avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
         username:'user_name',
         caption:'caption....................................................!',
     },
     {
+        key:"2",
         id:'user_id',
         avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
         username:'user_name',
         caption:'caption....................................................!',
     },
     {
+        key:"1",
         id:'user_id',
         avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
         username:'user_name',
