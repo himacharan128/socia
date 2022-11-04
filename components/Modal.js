@@ -67,14 +67,14 @@ function Modal(){
                     leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                         <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden 
                         shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
-                            <div>
+                            <div className="flex items-center justify-center flex-col">
                                 {selectedFile ? (
                                     <img src={selectedFile} onClick={()=>setSelectedFile(null)} alt=""
                                     className="w-full object-contain cursor-pointer" />
                                 ):(
                                 <div onClick={()=> filePickerRef.current.click()} 
-                                classname="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer" >
-                                    <CameraIcon className="h-6 w-6 text-red-600" aria-hidden="true"/>
+                                classname="mx-auto flex flex-col items-center justify-center h-12 rounded-full bg-red-100 cursor-pointer" >
+                                    <CameraIcon className="h-12 w-12 text-red-600" aria-hidden="true"/>
                                 </div>
                                 )}
                                 <div>
