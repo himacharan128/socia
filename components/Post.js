@@ -1,4 +1,5 @@
 import { async } from "@firebase/util";
+import Image from "next/image"
 import {
     BookmarkIcon,
     ChatIcon,
@@ -58,7 +59,7 @@ function Post({id,username,userImage,img,cap}){
             <div>
                 <div className="flex items-center p-5">
                     <img src={userImage} className="rounded-full h-12 w-12 object-contain first-letter
-                    border p-1 mr-3" alt=""  
+                    border p-1 mr-3" alt=""
                     />
                     <p className="flex-1 font-bold">{username}</p>
                     <DotsHorizontalIcon className="h-5"/>
@@ -131,8 +132,3 @@ function Post({id,username,userImage,img,cap}){
     )
 }
 export default Post
-
-
-
-
-

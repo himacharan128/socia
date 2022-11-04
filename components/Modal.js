@@ -7,6 +7,7 @@ import {db,storage } from "../firebase";
 import { useSession } from "next-auth/react"
 import {addDoc,collection,serverTimestamp,updateDoc,doc} from  "@firebase/firestore"
 import { getDownloadURL, ref, uploadString} from "firebase/storage";
+import Image from "next/image"
 function Modal(){
     const { data: session } = useSession(); 
     const [open,setOpen]=useRecoilState(modalState);
