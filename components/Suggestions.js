@@ -2,7 +2,7 @@ const profile=[
     {
         id:'user_id',
         avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
-        username:'user_name',
+        username:'remus',
         caption:'caption....................................................!',
     },
     {
