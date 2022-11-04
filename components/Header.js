@@ -16,7 +16,8 @@ function Header(){
             <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
                 {/* left */}
                 <div onClick={()=>router.push('/')} className="relative hidden sm:inline-grid w-24 cursor-pointer">
-                    <Image src="https://i.ibb.co/3WS3BBP/Screenshot-2022-11-04-at-9-46-13-PM.png" layout="fill" objectFit="contain"/>
+                    <Image className="rounded-lg" 
+                    src="https://i.ibb.co/n359qnG/Screenshot-2022-11-04-at-11-17-10-PM.png" layout="fill" objectFit="contain"/>
                     
                 </div>
                 <div onClick={()=>router.push('/')} className="relative w-10 sm:hidden flex-shrink-0 cursor-pointer">
