@@ -21,7 +21,7 @@ function Header(){
                     
                 </div>
                 <div onClick={()=>router.push('/')} className="relative w-10 sm:hidden flex-shrink-0 cursor-pointer">
-                <img src="https://i.ibb.co/1QVNYLN/Screenshot-2022-11-04-at-9-37-38-PM.png" layout="fill" objectFit="contain"/>
+                <img src="https://i.ibb.co/n359qnG/Screenshot-2022-11-04-at-11-17-10-PM.png" className=" h-10 w-20 mt-2 "/>
                 </div>
                 {/* middle */}
                 <div className="max-w-xs">
