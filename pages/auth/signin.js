@@ -2,7 +2,7 @@ import { getProviders, signIn as SignIntoProvider} from "next-auth/react";
 import Header from "../../components/Header";
 import Image from 'next/image'
 function SignIn({providers}){
-    console.log(providers)
+    // console.log(providers)
     return (
         <>
         <Header/>
