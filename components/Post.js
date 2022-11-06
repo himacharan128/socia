@@ -101,7 +101,7 @@ function Post({id,username,userImage,img,cap}){
                     {comments.map((comment) => (
                     <div key={comment.id} className="flex items-center 
                     space-x-2 mb-3">
-                        <img className ="h-7 rounded-full" src={comment.data().userImage} alt=""/>
+                        <img className ="h-6 rounded-lg" src={comment.data().userImage} alt=""/>
                         <p className="text-sm flex-1">
                             <span className="font-semibold">
                                 {comment.data().username}
