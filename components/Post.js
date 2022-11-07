@@ -130,4 +130,4 @@ function Post({id,username,userImage,img,cap}){
         </div>
     )
 }
-export default mmmPost
+export default Post
