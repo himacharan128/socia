@@ -20,7 +20,7 @@ function SignIn({providers}){
                 </div>
             ))}
             </div>
-            <div className="p-4 bg-slate-100 rounded-xl px-4 shadow-sm mt-52">
+            <div className="p-4 bg-slate-100 rounded-xl px-4 shadow-sm mt-20">
             <h1>
             No login password credentials are stored in our database, they are completely authorized
             and authenticated by Google Services.
