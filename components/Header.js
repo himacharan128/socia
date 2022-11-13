@@ -1,6 +1,6 @@
 import Image from "next/image"
 import {
-    SearchIcon,PlusCircleIcon,UserGroupIcon,PaperAirplaneIcon,MenuIcon, HeartIcon
+    SearchIcon,PlusCircleIcon,UserGroupIcon,PaperAirplaneIcon,MenuIcon, HeartIcon, RefreshIcon
 } from "@heroicons/react/outline";
 import {HomeIcon}from "@heroicons/react/solid";
 import { signOut,signIn, useSession } from "next-auth/react";
@@ -23,9 +23,11 @@ function Header(){
                 <div onClick={()=>router.push('/')} className="relative w-10 sm:hidden flex-shrink-0 cursor-pointer">
                 <img src="https://i.ibb.co/YbzSsYQ/Screenshot-2022-11-06-at-9-47-03-PM.png" className=" h-10 w-10 mt-2 "/>
                 </div>
+                <RefreshIcon className="h-10 w-10 mt-2 cursor-pointer transition-all duration 500 ease-out 
+                hover: rotate-180 active:scale-125"/>
                 {/* middle */}
                 <div className="max-w-xs">
-                    <div className="relative mt-1 p-1 rounded-md">
+                    <div className="relative mt-1 p-1 rounded-md flex">
                         <div className="absolute inset-y-0 pl-3 flex items-center pointer-events-none">
                             <SearchIcon className="h-5 w-5 text-gray-500"/>
                         </div>
