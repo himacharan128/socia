@@ -24,7 +24,7 @@ function Header(){
                 <img src="https://i.ibb.co/YbzSsYQ/Screenshot-2022-11-06-at-9-47-03-PM.png" className=" h-10 w-10 mt-2 "/>
                 </div>
                 <RefreshIcon className="h-10 w-10 mt-2 cursor-pointer transition-all duration 500 ease-out 
-                hover: rotate-180 active:scale-125"/>
+                hover:rotate-180 active:scale-125"/>
                 {/* middle */}
                 <div className="max-w-xs">
                     <div className="relative mt-1 p-1 rounded-md flex">
