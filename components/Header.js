@@ -42,13 +42,13 @@ function Header(){
                     <MenuIcon className="h-6 w-6 md:hidden  cursor-pointer"/>
                     {session ? (
                         <>
-                        {/* <div className="relative navbtn">
+                        { <div className="relative navbtn">
                         <PaperAirplaneIcon className="navbtn rotate-45"/>
                             <div className="absolute -top-1 -right-2 text-xs w-5 h-5 bg-red-500 
                             rounded-full flex items-center justify-center animate-pulse text-white">
                                 9+
                             </div>
-                        </div> */}
+                        </div> }
                         <PlusCircleIcon onClick={()=> setOpen(true)} className="navbtn"/>
                         {/* <UserGroupIcon className="navbtn"/> */}
                         <HeartIcon onClick={signOut} className="navbtn"/>

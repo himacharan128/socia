@@ -1,31 +1,46 @@
 const profile=[
-    {
-        key:"4",
-        id:'user_id',
-        avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
-        username:'remus',
-        caption:'caption....................................................!',
-    },
-    {
-        key:"3",
-        id:'user_id',
-        avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
-        username:'user_name',
-        caption:'caption....................................................!',
-    },
+    
     {
         key:"2",
         id:'user_id',
-        avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
-        username:'user_name',
-        caption:'caption....................................................!',
+        avatar:'https://i.ibb.co/C1w1c7T/images-5.jpg',
+        username:'Amar ',
+        caption:'The best things come from living outside of your comfort zone',
     },
     {
         key:"1",
         id:'user_id',
-        avatar:'https://i.ibb.co/x64jpHG/View-recent-photos.jpg',
-        username:'user_name',
-        caption:'caption....................................................!',
+        avatar:'https://i.ibb.co/Z2KK3D5/images.jpg',
+        username:'Nikhil',
+        caption:'Success is in my veins',
+    },
+    {
+        key:"3",
+        id:'user_id',
+        avatar:'https://i.ibb.co/7bXTzht/images-3.jpg',
+        username:'Natasha',
+        caption:'Selfie Sunday',
+    },
+    {
+        key:"1",
+        id:'user_id',
+        avatar:'https://i.ibb.co/6JczDp5/images-2.jpg',
+        username:'james',
+        caption:'What should I put here?',
+    },
+    {
+        key:"4",
+        id:'user_id',
+        avatar:'https://i.ibb.co/0fn0202/images-7.jpg',
+        username:'remus',
+        caption:'Just me',
+    },
+    {
+        key:"1",
+        id:'user_id',
+        avatar:'https://i.ibb.co/9g88NsH/images-1.jpg',
+        username:'joe',
+        caption:'Scratch here ▒▒▒▒▒▒▒▒▒▒ to unveil my secret bio',
     },
 ]
 function Suggestions(){
