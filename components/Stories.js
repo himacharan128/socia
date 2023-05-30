@@ -19,8 +19,8 @@ function Stories(){
                     username1="himacharan"
                 />
                 <Story
-                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
-                    username1="himacharan"
+                    img="https://i.ibb.co/wN9h9w8/ANNAYYA.jpg"
+                    username1="Tharun"
                 />
                 <Story
                     img="https://avatars.githubusercontent.com/u/82611545?v=4"
@@ -58,7 +58,7 @@ function Stories(){
                     img="https://avatars.githubusercontent.com/u/82611545?v=4"
                     username1="himacharan"
                 />
-                
+
         </div>
     )
 } 
