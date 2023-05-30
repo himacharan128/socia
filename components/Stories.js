@@ -22,6 +22,43 @@ function Stories(){
                     img="https://avatars.githubusercontent.com/u/82611545?v=4"
                     username1="himacharan"
                 />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                <Story
+                    img="https://avatars.githubusercontent.com/u/82611545?v=4"
+                    username1="himacharan"
+                />
+                
         </div>
     )
 } 
